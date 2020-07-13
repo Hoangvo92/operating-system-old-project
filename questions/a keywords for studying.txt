@@ -1,0 +1,76 @@
+blocking receive:
+   +block all receives-> waiting
+   +does not go well with direct communication
+   +Using blocking receives with naming does not allow the receiving process to receive any messages from any process but the one it has specified
+Exception condition handling:
+Quality of service
+ACK: acknowledgment message
+classes of service: datagrams; Virtual circuits; streams
+   +datagrams: unreliable datagrams; User datagram protocol UDP;
+   +Virtual Circuits: logical connection between sender and receiver: FTP, HTTP
+   +Streams: do not preserve message boundaries; TCP; Datagrams and Streams;
+  
+Remote procedure calls:
+    send_red(args); rcv_req(&args); rcv_reply(&results);
+RPC(cont'd)
+system generation: not a good model for creating solution because the system automatically generate resolves
+The user stub
+The server stub
+server procedure
+passing by reference
+shared addrss
+
+difference between passing by reference and passing by values
+little endians; big endians;
+hton
+handling partial executions:
+   -resubmit all the time (always resubmit)
+   -At most once semantics
+   -transaction mechanism (the best solution, the costliest) ->use in financial transactions
+
+
+realizations:
+   -Sun RPC
+   -MSRPC or Microsoft RPC
+atomic operation
+critical section
+deadlock
+livelock
+mutual exclusion
+race condition
+starvation
+
+
+
+
+
+
+
+
+
+
+
+
+The steps involved in establishing a socket on the client side are as follows:
+1. Create a socket with the socket() system call
+2. Connect the socket to the address of the server using the connect() system call
+Send and receive data. There are a number of ways to do this, but the simplest is to
+use the read() and write() system calls.
+3.
+The steps involved in establishing a socket on the server side are as follows:
+1. Create a socket with the socket() system call
+Bind the socket to an address using the bind() system call. For a server socket on
+the Internet, an address consists of a port number on the host machine.
+2.
+3. Listen for connections with the listen() system call
+Accept a connection with the accept() system call. This call typically blocks until a
+client connects with the server.
+4.
+5. Send and receive data
+
+
+
+argv[2]
+portno = atoi(argv[2])
+socket(af_...
+server = gethostbyname(argv[1])
