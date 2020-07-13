@@ -1,0 +1,37 @@
+The monitor is a programming-language construct that provides equivalent functionality to that of semaphores and that is easier to control. The concept was first formally defined in [HOAR74]. The monitor construct has been implemented in a number of programming languages, including Concurrent Pascal, Pascal-Plus, Modula-2, Modula-3, and Java. It has also been implemented as a program library. This allows programmers to put a monitor lock on any object. In particular, for something like a linked list, you may want to lock all linked lists with one lock, or have one lock for each list, or have one lock for each element of each list.
+
+A monitor is a software module consisting of one or more procedures, an initialization sequence, and local data.
+
+
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Monitor
+-Programming language construct that provides equivalent functionality to that of semaphores and is easier to control
+-Implemented in a number of programming languages : including Concurrent Pascal, Pascal-Plus, Modula-2, Modula-3, and Java
+-Has also been implemented as a program library
+-Software module consisting of one or more procedures, an initialization sequence, and local data
+
+
+The signal of a semaphore: increase semaphore by one
+
+
+
+44$$$$$$$$$$$$$$$$$$$$$$$
+The chief characteristics of a monitor are the following:
+1. The local data variables are accessible only by the monitor’s procedures and
+not by any external procedure.
+2. A process enters the monitor by invoking one of its procedures.
+3. Only one process may be executing in the monitor at a time; any other processes
+that have invoked the monitor are blocked, waiting for the monitor to become available.
+
+The first two characteristics are reminiscent of those for objects in object-oriented software. Indeed, an object-oriented OS or programming language can readily implement a monitor as an object with special characteristics.
+
+By enforcing the discipline of one process at a time, the monitor is able to provide a mutual exclusion facility. The data variables in the monitor can be accessed by only one process at a time. Thus, a shared data structure can be protected by placing it in a monitor. If the data in a monitor represent some resource, then the monitor provides a mutual exclusion facility for accessing the resource. 
+
+To be useful for concurrent processing, the monitor must include synchronization tools. For example, suppose a process invokes the monitor and, while in the
+monitor, must be blocked until some condition is satisfied. A facility is needed by which the process is not only blocked but releases the monitor so that some other process may enter it. Later, when the condition is satisfied and the monitor is again available, the process needs to be resumed and allowed to reenter the monitor at the point of its suspension.
+
+
+static int member ==0
+
+

@@ -1,0 +1,6 @@
+
+
+In order to use the font Icon component you must first add the Material icons font. Here are some instructions on how to do so. For instance, via Google Web Fonts:
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
